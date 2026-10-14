@@ -64,6 +64,23 @@ body {
   border-bottom: 1px solid #b87586;
 }
 
+.site-nav .navbar-brand .bi {
+  font-size: 1.6rem;
+}
+
+.site-nav .navbar-toggler {
+  border: none;
+  padding: 0;
+  color: #2b2528;
+}
+
+.site-nav .navbar-toggler .bi {
+  font-size: 1.9rem;
+}
+
+.site-nav .navbar-toggler:focus:not(:focus-visible) {
+  box-shadow: none;
+}
 
 /* HEADER END*/
 
