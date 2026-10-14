@@ -17,13 +17,19 @@
     If you take the AI-assisted code animation option, that code must ALSO be
     wrapped in inline start/end comments, and you must be able to explain it.
 
-    First name:       [Your First Name]
+    First name:       Mina
     File:             about.html
 
-    Tool/Source:      [e.g. ChatGPT / Claude / GitHub Copilot / getbootstrap.com / none]
-    Used for:         [e.g. adapting the dark/light mode switch]
-    Extent of use:    [e.g. small snippet suggested, then adapted by hand]
-    Date:             [DD Month 2026]
+    Tool/Source:       Bootstrap
+      Used for:         Nav Bar
+      Extent of use:    used starter for base of nav bar
+      Date:             14 Oct 2026
+
+    Tool/Source:      Google Fonts
+    Used for:         For Scope One and Plus Jakarta Sans fonts used in website
+    Extent of use:    Link snippets given by Google Fonts
+    Date:             14 Oct 2026
+
 
     If no AI or open-source code was used in this file, replace the above with:
     "No AI or open-source code was used in this file."
@@ -31,210 +37,99 @@
     Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-about-f0c59a494cdf5775acbc5db6619910e7
     =====================================================================================
     -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Other meta tags -->
-    <meta name="description" content="Marge Simpson's portfolio website">
-    <meta name="author" content="Marge Simpson">
+    <meta name="description" content="Portfolio Website">
+    <meta name="author" content="Mina Armijo">
 
-    <!-- Never forget your title!  -->
-    <title>Marge Simpson | About</title>
+    <!-- Title  -->
+    <title>About | Mina Armijo</title>
 
     <!-- ***** Link tags ***** -->
     <!-- Bootstrap core CSS -->
-    <!-- this is where Bootstrap's CSS is loaded in via their CDN - you don't need to include the actual files in your site folder -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <!-- Never forget your favicon! - Adapted from: https://favicon.io/ -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
-    <link rel="manifest" href="img/favicons/site.webmanifest">
 
-    <!-- Icons - It's possible to load in unique icons to style into your site - Bootstrap's are suggested -->
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous">
 
     <!-- Web fonts -->
-    <!-- GOOGLE FONTS - Start: Oswald and Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <!-- GOOGLE FONTS - End -->
+    <!-- Source: Google Fonts (https://fonts.google.com/selection/embed) — Scope One and Plus Jakarta Sans Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
 
-    <!-- Your custom CSS for this template - must be after Bootstrap's link element (to load after) if overriding Bootstrap classes to customize -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Prata&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link href="css/custom.css" type="text/css" rel="stylesheet" media="screen">
-  </head>
-  <body class="bg-dark d-flex flex-column min-vh-100">
 
-    <!-- HEADER - BOOTSTRAP 5 Navbar with Centre Logo - Start: https://www.codehim.com/bootstrap/bootstrap-5-navbar-with-center-logo/ -->
+  </head>
+
+
+  <body>
 
     <header class="header fixed-top">
-      <nav class="navbar navbar-expand-lg text-uppercase py-0">
-        <a class="navbar-brand d-lg-none py-0 ms-4 me-0" href="index.html">
-          <span class="fw-bold"><img src="img/margeicon.jpg" class="img-fluid rounded" alt="Marge Simpson - home"></span>
-        </a>
-        <div class="offcanvas offcanvas-end vh-100" tabindex="-1" id="navbarOffcanvasLg">
-          <div class="container-lg">
-            <div class="row flex-grow-1 p-4 p-lg-0">
-              <div class="d-flex d-lg-block col-lg-4 order-1 order-lg-2 text-lg-center">
-                <button type="button" class="d-lg-none border-0 bg-transparent p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
-                  <i class="bi bi-x-lg"></i>
-                </button>
-                <a class="navbar-brand d-none d-lg-block py-0 me-0" href="index.html">
-                  Marge <span class="fw-bold">Simpson</span>
-                </a>
-              </div>
-              <div class="col-lg-4 order-2 order-lg-1 ms-auto ms-lg-0">
-                <ul class="navbar-nav d-flex flex-column flex-lg-row">
-                  <li class="nav-item me-4 me-xxl-5">
-                    <a class="nav-link" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="portfolio.html">Portfolio</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-4 order-3">
-                <ul class="navbar-nav d-flex flex-column flex-lg-row justify-content-lg-end">
-                  <li class="nav-item me-4 me-xxl-5">
-                    <a class="nav-link" href="resume.html">Resume</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+
+      <!-- Nav Bar -->
+
+      <!-- Source: Bootstrap (https://getbootstrap.com/docs/5.3/components/navbar/) — Base of Nav Bar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary site-nav">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="index.html">Home</a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
           </div>
         </div>
       </nav>
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
-        <i class="bi bi-list"></i>
-      </button>
     </header>
-    <!-- HEADER - BOOTSTRAP 5 Navbar with Centre Logo - End -->
 
-    <!-- SWITCH - Start: https://www.cssscript.com/dark-mode-switcher-bootstrap-5/ -->
-    <div class="form-check form-switch ms-auto mt-3 me-3">
-      <label class="form-check-label ms-3" for="lightSwitch">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
-            fill="currentColor"
-            class="bi bi-brightness-high"
-            viewBox="0 0 16 16"
-            >
-          <path
-              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-              />
-        </svg>
-      </label>
-      <input class="form-check-input" type="checkbox" id="lightSwitch">
-    </div>
 
-    <!-- SWITCH - End -->
+    <div>
+      <main>
+        <div class="row">
+          <div class="col">
 
-    <!-- Content goes here -->
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h1 class="text-center">Marge Simpson | About Me</h1>
-          <h2>The Marge Simpson Story</h2>
-          <p>Marge is an award winning <span class="standout">painter, cook and homemaker</span>. Despite these tendencies, Marge has had her fair share of wild escapades throughout the history of the series. She worked as a <span class="standout">police officer</span> in Springfield, took therapy for flight fear, was a <span class="standout">real estate agent</span>, sold pretzels, was a painter, was imprisoned for shoplifting, became a gambling addict, showed alcoholic tendencies, was at one time known as The Listen Lady, was an unwilling participant in a cross-country police chase, overdosed on steroids, cheated on a cooking competition and developed amnesia.</p>
-
-        </div>
-      </div>
-      <!-- source: https://simpsons.fandom.com/wiki/Marge_Simpson -->
-
-      <div class="row">
-
-        <!-- copy the 'embed' code from your video service -->
-        <!-- Then apply Bootstrap classes: https://getbootstrap.com/docs/5.3/helpers/ratio/#about -->
-
-        <!-- controlling the parameters of your video's playback has mixed outcomes across different browsers - for example, Chrome and YouTube don't like allowing autoplay unless the video has no audio or is muted. -->
-
-        <div class="col-sm-6">
-          <h3>YouTube - First Video</h3>
-
-          <!-- YOUTUBE RATIO EMBED - Start -->
-          <div class="ratio ratio-16x9">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ltoHj_M5AoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
           </div>
-
-          <!-- YOUTUBE RATIO EMBED - End -->
-
-          <!-- YouTube help: https://support.google.com/youtube/answer/171780?hl=en -->
-          <!-- further options: https://developers.google.com/youtube/player_parameters -->
-
-          <p class="p-2">Marge Simpson is one of the best characters in TV. Where would Springfield be without her? For this list, we'll be looking at highlights of the Simpson matriarch from over the course of this extensive series, whether they be emotional, inspiring or downright hysterical. Also, be on the lookout for a few spoilers down the line.</p>
-
         </div>
-
-        <div class="col-sm-6">
-          <h3>YouTube - Second Video</h3>
-
-          <!-- YOUTUBE RATIO EMBED - Start -->
-          <div class="ratio ratio-16x9">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CgDJMWohLiA?si=X9tB2UjixWSG8b2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-
-          <!-- YOUTUBE RATIO EMBED - End -->
-
-          <!-- YouTube help: https://support.google.com/youtube/answer/171780?hl=en -->
-          <!-- further options: https://developers.google.com/youtube/player_parameters -->
-
-          <p class="p-2">Marjorie Jacqueline "Marge" Simpson, (née Bouvier), is the happy homemaker and full-time mom of the Simpson family. With her husband Homer, she has three children: Bart, Lisa, and Maggie Simpson. Marge is the moralistic force in her family and often provides a grounding voice in the midst of her family's antics by trying to maintain order in the Simpson household. Aside from her duties at home, Marge flirted briefly with a number of careers ranging from police officer to anti-violence activist.</p>
-        </div>
-
-      </div>
+      </main>
     </div>
 
-    <!-- FLOATING STICKY SOCIAL MEDIA - Start -->
 
-    <div class="icon-bar d-none d-md-block">
-      <a href="https://facebook.com" target="_blank" class="facebook rounded-3"><i class="bi bi-facebook fs-3"></i></a>
-      <a href="https://x.com" target="_blank" class="twitter rounded-3"><i class="bi bi-twitter-x fs-3"></i></a>
-      <a href="https://google.com" target="_blank" class="google rounded-3"><i class="bi bi-google fs-3"></i></a>
-      <a href="https://linkedin.com" target="_blank" class="linkedin rounded-3"><i class="bi bi-linkedin fs-3"></i></a>
-      <a href="https://youtube.com" target="_blank" class="youtube rounded-3"><i class="bi bi-youtube fs-3"></i></a>
-    </div>
-
-    <!-- FLOATING STICKY SOCIAL MEDIA - End -->
-
-    <!-- FOOTER - Start: https://getbootstrap.com/docs/5.3/examples/footers/ -->
-
-    <div class="container mt-auto">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
-        <p class="col-md-4 mb-0">&copy; 2026 Marge Simpson</p>
-
-        <ul class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none list-unstyled">
-          <li class="ms-3"> <a class="footsocial" href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram fs-3"></i></a></li>
-          <li class="ms-3"><a class="footsocial" href="mailto:margesimpson@gmail.com"><i class="bi bi-envelope fs-3"></i></a></li>
-          <li class="ms-3"><a class="footsocial" href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin fs-3"></i></a></li>
-        </ul>
-
-        <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="index.html" class="nav-link px-2">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link px-2">About</a></li>
-          <li class="nav-item"><a href="resume.html" class="nav-link px-2">Resume</a></li>
-          <li class="nav-item"><a href="portfolio.html" class="nav-link px-2">Portfolio</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link px-2">Contact</a></li>
-        </ul>
-      </footer>
-    </div>
-    <!-- FOOTER - End -->
+    <!-- ABOUT PAGE - End -->
 
     <!-- =================No Content below here========================= -->
     <!-- Bootstrap JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
-    <!-- LIGHT AND DARK MODE SWITCH - Start: https://www.cssscript.com/dark-mode-switcher-bootstrap-5/ -->
-    <script src="js/switch.js"></script>
-    <!-- LIGHT AND DARK MODE SWITCH - End -->
 
   </body>
 </html>
