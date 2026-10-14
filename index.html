@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT-->
+
+<!-- Date: 12 October 2026 -->
+<!-- Author: Web and Time-based Design subject -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required Bootstrap meta tags -->
+    <meta charset="utf-8">
+
+    <!--
+    ================= AI / SOURCE USE DECLARATION (DRAFT — COMPLETE THIS) =================
+    Per DESN1021 Project 2.2 Assessment Specifications, a summary declaration is
+    required at the top of EVERY file. Replace the bracketed placeholders below,
+    and add inline acknowledgements next to any AI/open-source snippet you use.
+    If you take the AI-assisted code animation option, that code must ALSO be
+    wrapped in inline start/end comments, and you must be able to explain it.
+
+    First name:       [Your First Name]
+    File:             index.html
+
+    Tool/Source:      [e.g. ChatGPT / Claude / GitHub Copilot / getbootstrap.com / none]
+    Used for:         [e.g. adapting the typewriter effect]
+    Extent of use:    [e.g. small snippet suggested, then adapted by hand]
+    Date:             [DD Month 2026]
+
+    If no AI or open-source code was used in this file, replace the above with:
+    "No AI or open-source code was used in this file."
+
+    Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-index-852b65e892327929c8684617a9f32655
+    =====================================================================================
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Other meta tags -->
+    <meta name="description" content="Marge Simpson's portfolio website">
+    <meta name="author" content="Marge Simpson">
+
+    <!-- Never forget your title!  -->
+    <title>Marge Simpson | Home</title>
+
+    <!-- ***** Link tags ***** -->
+    <!-- Bootstrap core CSS -->
+    <!-- this is where Bootstrap's CSS is loaded in via their CDN - you don't need to include the actual files in your site folder -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Never forget your favicon! - Adapted from: https://favicon.io/ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+
+    <!-- Icons - It's possible to load in unique icons to style into your site - Bootstrap's are suggested -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous">
+
+    <!-- Web fonts -->
+    <!-- GOOGLE FONTS - Start: Oswald and Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS - End -->
+
+    <!-- Your custom CSS for this template - must be after Bootstrap's link element (to load after) if overriding Bootstrap classes to customize -->
+    <link href="css/custom.css" type="text/css" rel="stylesheet" media="screen">
+  </head>
+  <!-- COVER PAGE - Start - Adapted from: https://getbootstrap.com/docs/5.3/examples/cover/ -->
+  <body class="bg-dark d-flex flex-column min-vh-100">
+
+    <!-- HEADER - BOOTSTRAP 5 Navbar with Centre Logo - Start: https://www.codehim.com/bootstrap/bootstrap-5-navbar-with-center-logo/ -->
+    <header class="header fixed-top">
+      <nav class="navbar navbar-expand-lg text-uppercase py-0">
+        <a class="navbar-brand d-lg-none py-0 ms-4 me-0" href="index.html">
+          <span class="fw-bold"><img src="img/margeicon.jpg" class="img-fluid rounded" alt="Marge Simpson - home"></span>
+        </a>
+        <div class="offcanvas offcanvas-end vh-100" tabindex="-1" id="navbarOffcanvasLg">
+          <div class="container-lg">
+            <div class="row flex-grow-1 p-4 p-lg-0">
+              <div class="d-flex d-lg-block col-lg-4 order-1 order-lg-2 text-lg-center">
+                <button type="button" class="d-lg-none border-0 bg-transparent p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+                <a class="navbar-brand d-none d-lg-block py-0 me-0" href="index.html">
+                  Marge <span class="fw-bold">Simpson</span>
+                </a>
+              </div>
+              <div class="col-lg-4 order-2 order-lg-1 ms-auto ms-lg-0">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row">
+                  <li class="nav-item me-4 me-xxl-5">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-4 order-3">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row justify-content-lg-end">
+                  <li class="nav-item me-4 me-xxl-5">
+                    <a class="nav-link" href="resume.html">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+        <i class="bi bi-list"></i>
+      </button>
+    </header>
+    <!-- HEADER - BOOTSTRAP 5 Navbar with Centre Logo - End -->
+
+    <div class="container d-flex h-100 text-center ">
+      <main class="px-3">
+        <div class="row">
+          <div class="col">
+
+            <!-- TYPEWRITER EFFECT - Start: https://bootsnipp.com/snippets/XRNAv -->
+
+            <h1 class="intro"><span class="break">Welcome to Marge!</span> <span class="typewrite align-middle" data-period="2000" data-type='[ "The Creative?", "The Web Designer?", "The Animator?" ]'></span></h1>
+
+            <!-- TYPEWRITER EFFECT - End -->
+
+            <p class="pt-5">Hi I am Marge S! I am a creative professional with more than 10 years of industry experience in <span class="standout">Website Design</span>, <span class="standout">Animation and Visual Effects</span>, Illustration, Photography and <span class="standout">App Design</span>. What makes me passionate about being a creative is combining technology and creativity to help design tailor made solutions and help you tell your brand story.</p>
+
+            <p class="lead pt-5"><a href="about.html" class="btn btn-lg btn-secondary fw-bold">Find out more! </a></p>
+
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- FOOTER - Start: https://getbootstrap.com/docs/5.3/examples/footers/ -->
+
+    <div class="container mt-auto">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+        <p class="col-md-4 mb-0">&copy; 2026 Marge Simpson</p>
+
+        <ul class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none list-unstyled">
+          <li class="ms-3"> <a class="footsocial" href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram fs-3"></i></a></li>
+          <li class="ms-3"><a class="footsocial" href="mailto:margesimpson@gmail.com"><i class="bi bi-envelope fs-3"></i></a></li>
+          <li class="ms-3"><a class="footsocial" href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin fs-3"></i></a></li>
+        </ul>
+
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link px-2">About</a></li>
+          <li class="nav-item"><a href="resume.html" class="nav-link px-2">Resume</a></li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link px-2">Portfolio</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link px-2">Contact</a></li>
+        </ul>
+      </footer>
+    </div>
+    <!-- FOOTER - End -->
+
+    <!-- COVER PAGE - End -->
+
+    <!-- =================No Content below here========================= -->
+    <!-- Bootstrap JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- BOOTSNIPP CURSOR TYPEWRITER JS - Start -->
+    <script>
+      //made by vipul mirajkar thevipulm.appspot.com
+      var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+      };
+
+      TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+
+        setTimeout(function() {
+            that.tick();
+          }, delta);
+      };
+
+      window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+          var toRotate = elements[i].getAttribute('data-type');
+          var period = elements[i].getAttribute('data-period');
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+      };
+
+    </script>
+
+    <!-- BOOTSNIPP CURSOR TYPEWRITER JS - End -->
+
+    <!-- ANIMATED PARTICLES JS - Start: https://www.cssscript.com/best-particles-animation/ -->
+    <script>
+      // Some random colors
+      const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+      const numBalls = 50;
+      const balls = [];
+
+      for (let i = 0; i < numBalls; i++) {
+        let ball = document.createElement("div");
+        ball.classList.add("ball");
+        ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+        ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+        ball.style.top = `${Math.floor(Math.random() * 100)}vh`;
+        ball.style.transform = `scale(${Math.random()})`;
+        ball.style.width = `${Math.random()}em`;
+        ball.style.height = ball.style.width;
+
+        balls.push(ball);
+        document.body.append(ball);
+      }
+
+      // Keyframes
+      balls.forEach((el, i, ra) => {
+          let to = {
+            x: Math.random() * (i % 2 === 0 ? -11 : 11),
+            y: Math.random() * 12
+          };
+
+          let anim = el.animate(
+            [
+              { transform: "translate(0, 0)" },
+              { transform: `translate(${to.x}rem, ${to.y}rem)` }
+            ],
+            {
+              duration: (Math.random() + 1) * 2000, // random duration
+              direction: "alternate",
+              fill: "both",
+              iterations: Infinity,
+              easing: "ease-in-out"
+            }
+          );
+      });
+
+    </script>
+
+    <!-- ANIMATED PARTICLES JS - End -->
+
+  </body>
+</html>
+<!-- Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT-->
+<!-- Bootstrap 5.3 template designed for the Web and Time-based Design subject [DESN1021] - 2026 -->
+
+<!-- END AI / SOURCE USE DECLARATION — nothing to fill in here; the completed declaration goes in the top comment. Do not delete.
+     Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-index-852b65e892327929c8684617a9f32655 -->

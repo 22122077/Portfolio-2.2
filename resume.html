@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!-- Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT-->
+
+<!-- Date: 12 October 2026 -->
+<!-- Author: Web and Time-based Design subject -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required Bootstrap meta tags -->
+    <meta charset="utf-8">
+
+    <!--
+    ================= AI / SOURCE USE DECLARATION (DRAFT — COMPLETE THIS) =================
+    Per DESN1021 Project 2.2 Assessment Specifications, a summary declaration is
+    required at the top of EVERY file. Replace the bracketed placeholders below,
+    and add inline acknowledgements next to any AI/open-source snippet you use.
+    If you take the AI-assisted code animation option, that code must ALSO be
+    wrapped in inline start/end comments, and you must be able to explain it.
+
+    First name:       [Your First Name]
+    File:             resume.html
+
+    Tool/Source:      [e.g. ChatGPT / Claude / GitHub Copilot / getbootstrap.com / none]
+    Used for:         [e.g. adapting the parallax sections]
+    Extent of use:    [e.g. small snippet suggested, then adapted by hand]
+    Date:             [DD Month 2026]
+
+    If no AI or open-source code was used in this file, replace the above with:
+    "No AI or open-source code was used in this file."
+
+    Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-resume-1e6df368e4f74149d3f195561d657d71
+    =====================================================================================
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Other meta tags -->
+    <meta name="description" content="Marge Simpson's portfolio website">
+    <meta name="author" content="Marge Simpson">
+
+    <!-- Never forget your title!  -->
+    <title>Marge Simpson | Resume</title>
+
+    <!-- ***** Link tags ***** -->
+    <!-- Bootstrap core CSS -->
+    <!-- this is where Bootstrap's CSS is loaded in via their CDN - you don't need to include the actual files in your site folder -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Never forget your favicon! - Adapted from: https://favicon.io/ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+
+    <!-- Icons - It's possible to load in unique icons to style into your site - Bootstrap's are suggested -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous">
+
+    <!-- Web fonts -->
+    <!-- GOOGLE FONTS - Start: Oswald and Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS - End -->
+
+    <!-- Your custom CSS for this template - must be after Bootstrap's link element (to load after) if overriding Bootstrap classes to customize -->
+    <link href="css/custom.css" type="text/css" rel="stylesheet" media="screen">
+  </head>
+  <body class="bg-dark d-flex flex-column min-vh-100">
+
+    <!-- HEADER - BOOTSTRAP 5 Navbar with Centre Logo - Start: https://www.codehim.com/bootstrap/bootstrap-5-navbar-with-center-logo/ -->
+
+    <header class="header fixed-top">
+      <nav class="navbar navbar-expand-lg text-uppercase py-0">
+        <a class="navbar-brand d-lg-none py-0 ms-4 me-0" href="index.html">
+          <span class="fw-bold"><img src="img/margeicon.jpg" class="img-fluid rounded" alt="Marge Simpson - home"></span>
+        </a>
+        <div class="offcanvas offcanvas-end vh-100" tabindex="-1" id="navbarOffcanvasLg">
+          <div class="container-lg">
+            <div class="row flex-grow-1 p-4 p-lg-0">
+              <div class="d-flex d-lg-block col-lg-4 order-1 order-lg-2 text-lg-center">
+                <button type="button" class="d-lg-none border-0 bg-transparent p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+                <a class="navbar-brand d-none d-lg-block py-0 me-0" href="index.html">
+                  Marge <span class="fw-bold">Simpson</span>
+                </a>
+              </div>
+              <div class="col-lg-4 order-2 order-lg-1 ms-auto ms-lg-0">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row">
+                  <li class="nav-item me-4 me-xxl-5">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-4 order-3">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row justify-content-lg-end">
+                  <li class="nav-item me-4 me-xxl-5">
+                    <a class="nav-link" href="resume.html">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+        <i class="bi bi-list"></i>
+      </button>
+    </header>
+
+    <!-- HEADER - BOOTSTRAP 5 Navbar with Centre Logo - End -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center">Marge Simpson | Resume</h1>
+          <h2>About Me!</h2>
+
+          <p>Marge is an award winning <span class="standout">painter, cook and homemaker</span>. Despite these tendencies, Marge has had her fair share of wild escapades throughout the history of the series. She worked as a <span class="standout">police officer</span> in Springfield, took therapy for flight fear, was a <span class="standout">real estate agent</span>, sold pretzels, was a painter, was imprisoned for shoplifting, became a gambling addict, showed alcoholic tendencies, was at one time known as The Listen Lady, was an unwilling participant in a cross-country police chase, overdosed on steroids, cheated on a cooking competition and developed amnesia.</p>
+          <p>Marjorie Jacqueline "Marge" Simpson, (née Bouvier), is the happy homemaker and full-time mom of the Simpson family. With her husband Homer, she has three children: Bart, Lisa, and Maggie Simpson. Marge is the moralistic force in her family and often provides a grounding voice in the midst of her family's antics by trying to maintain order in the Simpson household. Aside from her duties at home, Marge flirted briefly with a number of careers ranging from police officer to anti-violence activist.</p>
+
+          <!-- RESUME DOWNLOAD - Start -->
+          <p class="pt-3"><a href="pdf/margesimpson_resume_2026.pdf" class="btn btn-lg btn-secondary fw-bold" target="_blank" download><i class="bi bi-file-earmark-pdf me-2"></i>Download my resume (PDF)</a></p>
+          <!-- RESUME DOWNLOAD - End -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <!-- First Parallax Image with Portfolio Text - Adapted from: https://www.w3schools.com/w3css/tryw3css_templates_parallax.htm; Image patterns generated using Adobe Firefly -->
+    <section class="module parallax parallax-1" data-type="background" data-speed="10">
+      <div class="parallax-container">
+        <h2>Photography</h2>
+      </div>
+    </section>
+    <!-- End First Parallax -->
+
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Education</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="job-detail candidates-profile-education text-center mb-5 mt-5">
+            <div class="profile-education-icon">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <h6 class="text-uppercase f-17"><a href="#" class="text-muted">University Of USA</a></h6>
+            <p class="f-14 mb-1">May 2016 - April 2017</p>
+            <p class="f-14 mb-0">Diploma In Management Studies</p>
+            <div class="divider-custom">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+              <div class="divider-custom-line"></div>
+            </div>
+            <p class="f-14 mb-0">Suspendisse faucibus et pellentesque egestas lacus ante convallis.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="job-detail candidates-profile-education text-center mb-5 mt-5">
+            <div class="profile-education-icon">
+              <i class="bi bi-book-fill"></i>
+            </div>
+            <h6 class="text-uppercase f-17"><a href="#" class="text-muted">University Of USA</a></h6>
+            <p class="f-14 mb-1">May 2017 - April 2018</p>
+            <p class="f-14 mb-0">Diploma In Management</p>
+            <div class="divider-custom">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+              <div class="divider-custom-line"></div>
+            </div>
+            <p class="f-14 mb-0">Suspendisse faucibus et pellentesque egestas lacus ante convallis.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="job-detail candidates-profile-education text-center text-muted mb-5 mt-5">
+            <div class="profile-education-icon">
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
+            <h6 class="text-uppercase f-17"><a href="#" class="text-muted">University Of USA</a></h6>
+            <p class="f-14 mb-1">May 2018 - April 2019</p>
+            <p class="f-14 mb-0">Management Of Company</p>
+            <div class="divider-custom">
+              <div class="divider-custom-line"></div>
+              <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+              <div class="divider-custom-line"></div>
+            </div>
+            <p class="f-14 mb-0">Suspendisse faucibus et pellentesque egestas lacus ante convallis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <!-- Second Parallax Image with Portfolio Text -->
+    <section class="module parallax parallax-2" data-type="background" data-speed="10">
+      <div class="parallax-container">
+        <h2>Illustration</h2>
+      </div>
+    </section>
+    <!-- End Second Parallax -->
+
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+          <h2>Skills and Abilities</h2>
+          <p>According to Simpsons Fandom Marge has the following skills:</p>
+          <ul>
+            <li>Marge is brilliant and artistically inclined &mdash; Marge specialises in painting and cooking.</li>
+            <li>Marge is a fantastic <span class="standout">singer</span> &mdash; Marge becomes a future famous rock star and is the lead singer in her band, is referred to as "the voice of her generation". </li>
+            <li>Marge is <span class="standout">highly organised</span> and has demonstrated that her agility &mdash; both mental and physical &mdash; is extremely advanced.</li>
+            <li>Marge usually has a good understanding of her circumstances and surroundings. Marge knows how to read the situation and knows how to <span class="standout">communicate</span> with all members of the family. </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <section class="module parallax parallax-3" data-type="background" data-speed="10">
+      <div class="parallax-container">
+        <h2>Typography</h2>
+      </div>
+    </section>
+    <!-- End Third Parallax -->
+
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+          <h2>Adobe Programs</h2>
+          <p>Marge is a prolific user of the Adobe product suite. From creating logos in Illustrator, producing brochures and posters within InDesign or editing movies with Adobe Premiere. Marge has the following skillset levels within the following Adobe Programs:</p>
+
+          <!-- CIRCLE PROGRESS BAR - Start: https://bootsnipp.com/snippets/nrDmZ -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6 border-0 bg-dark">
+                <div class="progress blue">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">Adobe Photoshop</div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 border-0 bg-dark">
+                <div class="progress pink">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">Adobe Premiere</div>
+                </div>
+              </div>
+
+              <div class="col-md-3 col-sm-6 border-0 bg-dark">
+                <div class="progress yellow">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">Adobe InDesign</div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 border-0 bg-dark">
+                <div class="progress green">
+                  <span class="progress-left">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                    <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">Adobe Illustrator</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CIRCLE PROGRESS BAR - End -->
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <!-- Fourth Parallax Image with Portfolio Text -->
+    <section class="module parallax parallax-4" data-type="background" data-speed="10">
+      <div class="parallax-container">
+        <h2>Layout</h2>
+      </div>
+    </section>
+
+    <!-- End Fourth Parallax -->
+
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+          <h2>References</h2>
+          <p>Want to hear what clients and collaborators think about the <span class="standout">Marge Simpson</span> experience? Select any one of the client testimonials for some awesome insights into the way I design, how I communicate and how I have already helped change the graphic design landscape.</p>
+
+          <!-- REFERENCES HOVER EFFECT - Start: https://bootsnipp.com/snippets/92e5X -->
+          <!-- Images created using Adobe Firefly -->
+          <div class="container mt-40">
+            <div class="row mt-30">
+              <div class="col-md-4 col-sm-6">
+                <div class="box">
+                  <img class="img-fluid rounded-3" src="img/rupert.jpg" alt="A pink cartoon dragon among leaves">
+                  <div class="box-content">
+                    <h3 class="title">Rupert Murdoch</h3>
+                    <span class="post">We were impressed by how quickly Marge understood our brief, and responded to feedback so promptly and accurately. </span>
+                    <ul class="social">
+                      <li><a href="https://facebook.com" target="_blank"><i class="bi bi-facebook fs-3"></i></a></li>
+                      <li><a href="https://x.com" target="_blank"><i class="bi bi-twitter-x fs-3"></i></a></li>
+                      <li><a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram fs-3"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <div class="box">
+                  <img class="img-fluid rounded-3" src="img/bill.jpg" alt="A smiling grey-haired man in a bright green suit">
+                  <div class="box-content">
+                    <h3 class="title">Bill Gates</h3>
+                    <span class="post">I chose to work with Marge Simpson as her website answered many of my questions before even speaking with her. </span>
+                    <ul class="social">
+                      <li><a href="https://facebook.com" target="_blank"><i class="bi bi-facebook fs-3"></i></a></li>
+                      <li><a href="https://x.com" target="_blank"><i class="bi bi-twitter-x fs-3"></i></a></li>
+                      <li><a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram fs-3"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                <div class="box">
+                  <img class="img-fluid rounded-3" src="img/steve.jpg" alt="A green cartoon unicorn with a pink mane">
+                  <div class="box-content">
+                    <h3 class="title">Steve Jobs</h3>
+                    <span class="post">Marge understands the business of graphic design. Marge shows a true interest in everything she's done and her suggestions will always prove that she understands the why of everything. </span>
+                    <ul class="social">
+                      <li><a href="https://facebook.com" target="_blank"><i class="bi bi-facebook fs-3"></i></a></li>
+                      <li><a href="https://x.com" target="_blank"><i class="bi bi-twitter-x fs-3"></i></a></li>
+                      <li><a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram fs-3"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- REFERENCES HOVER EFFECT - End -->
+
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+
+    <!-- FLOATING STICKY SOCIAL MEDIA - Start -->
+
+    <div class="icon-bar d-none d-md-block">
+      <a href="https://facebook.com" target="_blank" class="facebook rounded-3"><i class="bi bi-facebook fs-3"></i></a>
+      <a href="https://x.com" target="_blank" class="twitter rounded-3"><i class="bi bi-twitter-x fs-3"></i></a>
+      <a href="https://google.com" target="_blank" class="google rounded-3"><i class="bi bi-google fs-3"></i></a>
+      <a href="https://linkedin.com" target="_blank" class="linkedin rounded-3"><i class="bi bi-linkedin fs-3"></i></a>
+      <a href="https://youtube.com" target="_blank" class="youtube rounded-3"><i class="bi bi-youtube fs-3"></i></a>
+    </div>
+
+    <!-- FLOATING STICKY SOCIAL MEDIA - End -->
+
+    <!-- FOOTER - Start: https://getbootstrap.com/docs/5.3/examples/footers/ -->
+
+    <div class="container mt-auto">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+        <p class="col-md-4 mb-0">&copy; 2026 Marge Simpson</p>
+
+        <ul class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none list-unstyled">
+          <li class="ms-3"> <a class="footsocial" href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram fs-3"></i></a></li>
+          <li class="ms-3"><a class="footsocial" href="mailto:margesimpson@gmail.com"><i class="bi bi-envelope fs-3"></i></a></li>
+          <li class="ms-3"><a class="footsocial" href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin fs-3"></i></a></li>
+        </ul>
+
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link px-2">About</a></li>
+          <li class="nav-item"><a href="resume.html" class="nav-link px-2">Resume</a></li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link px-2">Portfolio</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link px-2">Contact</a></li>
+        </ul>
+      </footer>
+    </div>
+    <!-- FOOTER - End -->
+
+    <!-- =================No Content below here========================= -->
+    <!-- Bootstrap JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- PARALLAX SCRIPT - Start -->
+    <script src="js/script1.js"></script>
+    <!-- PARALLAX SCRIPT - End -->
+
+  </body>
+</html>
+<!-- Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT-->
+<!-- Bootstrap 5.3 template designed for the Web and Time-based Design subject [DESN1021] - 2026 -->
+
+<!-- END AI / SOURCE USE DECLARATION — nothing to fill in here; the completed declaration goes in the top comment. Do not delete.
+     Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-resume-1e6df368e4f74149d3f195561d657d71 -->

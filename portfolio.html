@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!-- Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT-->
+
+<!-- Date: 12 October 2026 -->
+<!-- Author: Web and Time-based Design subject -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required Bootstrap meta tags -->
+    <meta charset="utf-8">
+
+    <!--
+    ================= AI / SOURCE USE DECLARATION (DRAFT — COMPLETE THIS) =================
+    Per DESN1021 Project 2.2 Assessment Specifications, a summary declaration is
+    required at the top of EVERY file. Replace the bracketed placeholders below,
+    and add inline acknowledgements next to any AI/open-source snippet you use.
+    If you take the AI-assisted code animation option, that code must ALSO be
+    wrapped in inline start/end comments, and you must be able to explain it.
+
+    First name:       [Your First Name]
+    File:             portfolio.html
+
+    Tool/Source:      [e.g. ChatGPT / Claude / GitHub Copilot / getbootstrap.com / none]
+    Used for:         [e.g. adapting the image viewer]
+    Extent of use:    [e.g. small snippet suggested, then adapted by hand]
+    Date:             [DD Month 2026]
+
+    If no AI or open-source code was used in this file, replace the above with:
+    "No AI or open-source code was used in this file."
+
+    Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-portfolio-d39cd4e8c7a608a62ed10942fc93cbc5
+    =====================================================================================
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Other meta tags -->
+    <meta name="description" content="Marge Simpson's portfolio website">
+    <meta name="author" content="Marge Simpson">
+
+    <!-- Never forget your title!  -->
+    <title>Marge Simpson | Portfolio</title>
+
+    <!-- ***** Link tags ***** -->
+    <!-- Bootstrap core CSS -->
+    <!-- this is where Bootstrap's CSS is loaded in via their CDN - you don't need to include the actual files in your site folder -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Never forget your favicon! - Adapted from: https://favicon.io/ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+
+    <!-- Icons - It's possible to load in unique icons to style into your site - Bootstrap's are suggested -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous">
+
+    <!-- Web fonts -->
+    <!-- GOOGLE FONTS - Start: Oswald and Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS - End -->
+
+    <!-- Your custom CSS for this template - must be after Bootstrap's link element (to load after) if overriding Bootstrap classes to customize -->
+    <link href="css/custom.css" type="text/css" rel="stylesheet" media="screen">
+  </head>
+  <body class="bg-dark">
+
+    <!-- HEADER - BOOTSTRAP 5 Navbar with Centre Logo - Start: https://www.codehim.com/bootstrap/bootstrap-5-navbar-with-center-logo/ -->
+
+    <header class="header fixed-top">
+      <nav class="navbar navbar-expand-lg text-uppercase py-0">
+        <a class="navbar-brand d-lg-none py-0 ms-4 me-0" href="index.html">
+          <span class="fw-bold"><img src="img/margeicon.jpg" class="img-fluid rounded" alt="Marge Simpson - home"></span>
+        </a>
+        <div class="offcanvas offcanvas-end vh-100" tabindex="-1" id="navbarOffcanvasLg">
+          <div class="container-lg">
+            <div class="row flex-grow-1 p-4 p-lg-0">
+              <div class="d-flex d-lg-block col-lg-4 order-1 order-lg-2 text-lg-center">
+                <button type="button" class="d-lg-none border-0 bg-transparent p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+                <a class="navbar-brand d-none d-lg-block py-0 me-0" href="index.html">
+                  Marge <span class="fw-bold">Simpson</span>
+                </a>
+              </div>
+              <div class="col-lg-4 order-2 order-lg-1 ms-auto ms-lg-0">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row">
+                  <li class="nav-item me-4 me-xxl-5">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-4 order-3">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row justify-content-lg-end">
+                  <li class="nav-item me-4 me-xxl-5">
+                    <a class="nav-link" href="resume.html">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <button class="navbar-toggler d-lg-none fs-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+        <i class="bi bi-list"></i>
+      </button>
+    </header>
+    <!-- HEADER - BOOTSTRAP 5 Navbar with Centre Logo - End -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+          <h1 class="text-center">Marge Simpson | Portfolio</h1>
+          <h2>Portfolio Lightbox</h2>
+          <p>Welcome to examples of Marge Simpson's work. If you like what you see why not connect with me!</p>
+
+          <!-- FULL FEATURED IMAGE VIEWER - Start: https://www.cssscript.com/image-viewer-spotlight/ -->
+          <div class="spotlight-group">
+            <a class="spotlight" href="img/portfolio1.jpg" data-description="The Process">
+              <img class="viewer mb-2" src="img/portfolio1.jpg" alt="Marge at her easel painting Homer, with Bart, Lisa and Maggie watching">
+            </a>
+
+            <a class="spotlight" href="img/portfolio2.jpg" data-description="The Flood">
+              <img class="viewer mb-2" src="img/portfolio2.jpg" alt="Marge painting a lakeside view of Springfield">
+            </a>
+
+            <a class="spotlight" href="img/portfolio3.jpg">
+              <img class="viewer mb-2" src="img/portfolio3.jpg" alt="Marge's painting of Homer asleep in his armchair in his underwear">
+            </a>
+
+            <a class="spotlight" href="img/portfolio4.jpg" data-description="The Exhibition">
+              <img class="viewer mb-2" src="img/portfolio4.jpg" alt="Homer in a suit at a gallery, between two of Marge's sculptures">
+            </a>
+
+            <a class="spotlight" href="img/portfolio5.jpg" data-description="The Beatle">
+              <img class="viewer mb-2" src="img/portfolio5.jpg" alt="Marge's portrait of Ringo Starr">
+            </a>
+            <a class="spotlight" href="img/portfolio6.jpg">
+              <img class="viewer mb-2" src="img/portfolio6.jpg" alt="Marge's portrait of Mr Burns, stooped and holding a quill">
+            </a>
+
+            <a class="spotlight" href="img/portfolio7.jpg" data-description="The Process">
+              <img class="viewer mb-2" src="img/portfolio7.jpg" alt="Marge at her easel painting Homer, with Bart, Lisa and Maggie watching">
+            </a>
+            <a class="spotlight" href="img/portfolio8.jpg">
+              <img class="viewer mb-2" src="img/portfolio8.jpg" alt="Marge painting a lakeside view of Springfield">
+            </a>
+
+          </div>
+
+          <!-- FULL FEATURED IMAGE VIEWER - End -->
+
+          <h2>Portfolio Accordion</h2>
+          <p>Welcome to examples of Marge Simpson's work. If you like what you see why not connect with me!</p>
+
+          <!-- HORIZONTAL ACCORDION - Start: https://www.cssscript.com/pure-css-responsive-horizontal-accordion/ -->
+          <div class="accordion">
+            <ul>
+              <li>
+                <div> <a href="#">
+                    <h2>Title 1</h2>
+                    <p>Content 1</p>
+                  </a> </div>
+              </li>
+              <li>
+
+                <div> <a href="#">
+                    <h2>Title 2</h2>
+                    <p>Content 2</p>
+                  </a> </div>
+              </li>
+              <li>
+
+                <div> <a href="#">
+                    <h2>Title 3</h2>
+                    <p>Content 3</p>
+                  </a> </div>
+              </li>
+              <li>
+
+                <div> <a href="#">
+                    <h2>Title 4</h2>
+                    <p>Content 4</p>
+                  </a> </div>
+              </li>
+              <li>
+
+                <div> <a href="#">
+                    <h2>Title 5</h2>
+                    <p>Content 5</p>
+                  </a> </div>
+              </li>
+              <li>
+
+                <div> <a href="#">
+                    <h2>Title 6</h2>
+                    <p>Content 6</p>
+                  </a> </div>
+              </li>
+            </ul>
+          </div>
+          <!-- HORIZONTAL ACCORDION - End -->
+
+          <!-- PORTFOLIO MODAL - Start: https://startbootstrap.com/theme/freelancer -->
+          <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+              <!-- Portfolio Section Heading-->
+              <h2 class="page-section-heading">Portfolio Modal</h2>
+              <p>Welcome to examples of Marge Simpson's work. If you like what you see why not connect with me!</p>
+              <!-- Portfolio Grid Items-->
+              <div class="row justify-content-center">
+
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                  <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                      <div class="portfolio-item-caption-content text-center text-white"><i class="bi bi-plus-lg display-3"></i></div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio1.jpg" alt="Marge at her easel painting Homer, with Bart, Lisa and Maggie watching">
+                  </div>
+                </div>
+
+                <!-- Portfolio Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                  <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                      <div class="portfolio-item-caption-content text-center text-white"><i class="bi bi-plus-lg display-3"></i></div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio2.jpg" alt="Marge painting a lakeside view of Springfield">
+                  </div>
+                </div>
+
+                <!-- Portfolio Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                  <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                      <div class="portfolio-item-caption-content text-center text-white"><i class="bi bi-plus-lg display-3"></i></div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio3.jpg" alt="Marge's painting of Homer asleep in his armchair in his underwear">
+                  </div>
+                </div>
+
+                <!-- Portfolio Item 4-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                  <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                      <div class="portfolio-item-caption-content text-center text-white"><i class="bi bi-plus-lg display-3"></i></div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio4.jpg" alt="Homer in a suit at a gallery, between two of Marge's sculptures">
+                  </div>
+                </div>
+
+                <!-- Portfolio Item 5-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                  <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                      <div class="portfolio-item-caption-content text-center text-white"><i class="bi bi-plus-lg display-3"></i></div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio5.jpg" alt="Marge's portrait of Ringo Starr">
+                  </div>
+                </div>
+
+                <!-- Portfolio Item 6-->
+                <div class="col-md-6 col-lg-4">
+                  <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                      <div class="portfolio-item-caption-content text-center text-white"><i class="bi bi-plus-lg display-3"></i></div>
+                    </div>
+                    <img class="img-fluid" src="img/portfolio6.jpg" alt="Marge's portrait of Mr Burns, stooped and holding a quill">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PORTFOLIO MODAL - End -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <!-- FLOATING STICKY SOCIAL MEDIA - Start -->
+
+    <div class="icon-bar d-none d-md-block">
+      <a href="https://facebook.com" target="_blank" class="facebook rounded-3"><i class="bi bi-facebook fs-3"></i></a>
+      <a href="https://x.com" target="_blank" class="twitter rounded-3"><i class="bi bi-twitter-x fs-3"></i></a>
+      <a href="https://google.com" target="_blank" class="google rounded-3"><i class="bi bi-google fs-3"></i></a>
+      <a href="https://linkedin.com" target="_blank" class="linkedin rounded-3"><i class="bi bi-linkedin fs-3"></i></a>
+      <a href="https://youtube.com" target="_blank" class="youtube rounded-3"><i class="bi bi-youtube fs-3"></i></a>
+    </div>
+
+    <!-- FLOATING STICKY SOCIAL MEDIA - End -->
+
+    <!-- FOOTER - Start: https://getbootstrap.com/docs/5.3/examples/footers/ -->
+
+    <div class="container mt-auto">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+        <p class="col-md-4 mb-0">&copy; 2026 Marge Simpson</p>
+
+        <ul class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none list-unstyled">
+          <li class="ms-3"> <a class="footsocial" href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram fs-3"></i></a></li>
+          <li class="ms-3"><a class="footsocial" href="mailto:margesimpson@gmail.com"><i class="bi bi-envelope fs-3"></i></a></li>
+          <li class="ms-3"><a class="footsocial" href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin fs-3"></i></a></li>
+        </ul>
+
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link px-2">About</a></li>
+          <li class="nav-item"><a href="resume.html" class="nav-link px-2">Resume</a></li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link px-2">Portfolio</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link px-2">Contact</a></li>
+        </ul>
+      </footer>
+    </div>
+    <!-- FOOTER - End -->
+
+    <!-- PORTFOLIO MODAL POPUP - Start -->
+
+    <!-- Portfolio Modals-->
+    <!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">The Process</h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img class="img-fluid rounded mb-5" src="img/portfolio1.jpg" alt="Marge at her easel painting Homer, with Bart, Lisa and Maggie watching">
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">The Flood</h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img class="img-fluid rounded mb-5" src="img/portfolio2.jpg" alt="Marge painting a lakeside view of Springfield">
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">The Homer</h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img class="img-fluid rounded mb-5" src="img/portfolio3.jpg" alt="Marge's painting of Homer asleep in his armchair in his underwear">
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Modal 4-->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">The Exhibition</h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img class="img-fluid rounded mb-5" src="img/portfolio4.jpg" alt="Homer in a suit at a gallery, between two of Marge's sculptures">
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Modal 5-->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">The Beatle</h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img class="img-fluid rounded mb-5" src="img/portfolio5.jpg" alt="Marge's portrait of Ringo Starr">
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Portfolio Modal 6-->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+          <div class="modal-body text-center pb-5">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Mr Burns</h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="bi bi-star-fill"></i></div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img class="img-fluid rounded mb-5" src="img/portfolio6.jpg" alt="Marge's portrait of Mr Burns, stooped and holding a quill">
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                  <button class="btn btn-primary" data-bs-dismiss="modal">
+                    <i class="bi bi-x-lg"></i>
+                    Close Window
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PORTFOLIO MODAL POPUP - End -->
+
+    <!-- =================No Content below here========================= -->
+    <!-- Bootstrap JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- FULL FEATURED IMAGE VIEWER JS - Start -->
+    <script src="js/spotlight.js"></script>
+    <!-- FULL FEATURED IMAGE VIEWER JS - End -->
+
+  </body>
+</html>
+<!-- Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT-->
+<!-- Bootstrap 5.3 template designed for the Web and Time-based Design subject [DESN1021] - 2026 -->
+
+<!-- END AI / SOURCE USE DECLARATION — nothing to fill in here; the completed declaration goes in the top comment. Do not delete.
+     Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-portfolio-d39cd4e8c7a608a62ed10942fc93cbc5 -->

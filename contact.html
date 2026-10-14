@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!-- Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT-->
+
+<!-- Date: 12 October 2026 -->
+<!-- Author: Web and Time-based Design subject -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required Bootstrap meta tags -->
+    <meta charset="utf-8">
+
+    <!--
+    ================= AI / SOURCE USE DECLARATION (DRAFT — COMPLETE THIS) =================
+    Per DESN1021 Project 2.2 Assessment Specifications, a summary declaration is
+    required at the top of EVERY file. Replace the bracketed placeholders below,
+    and add inline acknowledgements next to any AI/open-source snippet you use.
+    If you take the AI-assisted code animation option, that code must ALSO be
+    wrapped in inline start/end comments, and you must be able to explain it.
+
+    First name:       [Your First Name]
+    File:             contact.html
+
+    Tool/Source:      [e.g. ChatGPT / Claude / GitHub Copilot / getbootstrap.com / none]
+    Used for:         [e.g. adapting the Swiper carousel]
+    Extent of use:    [e.g. small snippet suggested, then adapted by hand]
+    Date:             [DD Month 2026]
+
+    If no AI or open-source code was used in this file, replace the above with:
+    "No AI or open-source code was used in this file."
+
+    Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-contact-ad297f0a377ab0219a88711fb64a9da1
+    =====================================================================================
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Other meta tags -->
+    <meta name="description" content="Marge Simpson's portfolio website">
+    <meta name="author" content="Marge Simpson">
+
+    <!-- Never forget your title!  -->
+    <title>Marge Simpson | Contact</title>
+
+    <!-- ***** Link tags ***** -->
+    <!-- Bootstrap core CSS -->
+    <!-- this is where Bootstrap's CSS is loaded in via their CDN - you don't need to include the actual files in your site folder -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Never forget your favicon! - Adapted from: https://favicon.io/ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+
+    <!-- Icons - It's possible to load in unique icons to style into your site - Bootstrap's are suggested -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous">
+
+    <!-- Web fonts -->
+    <!-- GOOGLE FONTS - Start: Oswald and Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- GOOGLE FONTS - End -->
+
+    <!-- SWIPER CDN Style - Start -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.3.0/swiper-bundle.min.css" integrity="sha384-xkKzAc7JSlGq3SLCZHugx/i0gfYZf6kaFzg3v9/wz0HtsAFYPLz7aUvCFTac8KBk" crossorigin="anonymous">
+    <!-- SWIPER CDN Style - End -->
+
+    <!-- Your custom CSS for this template - must be after Bootstrap's link element (to load after) if overriding Bootstrap classes to customize -->
+    <link href="css/custom.css" type="text/css" rel="stylesheet" media="screen">
+  </head>
+  <body class="bg-dark">
+    <!-- HEADER - BOOTSTRAP 5 Navbar with Centre Logo - Start: https://www.codehim.com/bootstrap/bootstrap-5-navbar-with-center-logo/ -->
+
+    <header class="header fixed-top">
+      <nav class="navbar navbar-expand-lg text-uppercase py-0">
+        <a class="navbar-brand d-lg-none py-0 ms-4 me-0" href="index.html">
+          <span class="fw-bold"><img src="img/margeicon.jpg" class="img-fluid rounded" alt="Marge Simpson - home"></span>
+        </a>
+        <div class="offcanvas offcanvas-end vh-100" tabindex="-1" id="navbarOffcanvasLg">
+          <div class="container-lg">
+            <div class="row flex-grow-1 p-4 p-lg-0">
+              <div class="d-flex d-lg-block col-lg-4 order-1 order-lg-2 text-lg-center">
+                <button type="button" class="d-lg-none border-0 bg-transparent p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+                  <i class="bi bi-x-lg"></i>
+                </button>
+                <a class="navbar-brand d-none d-lg-block py-0 me-0" href="index.html">
+                  Marge <span class="fw-bold">Simpson</span>
+                </a>
+              </div>
+              <div class="col-lg-4 order-2 order-lg-1 ms-auto ms-lg-0">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row">
+                  <li class="nav-item me-4 me-xxl-5">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-4 order-3">
+                <ul class="navbar-nav d-flex flex-column flex-lg-row justify-content-lg-end">
+                  <li class="nav-item me-4 me-xxl-5">
+                    <a class="nav-link" href="resume.html">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+        <i class="bi bi-list"></i>
+      </button>
+    </header>
+    <!-- HEADER - BOOTSTRAP 5 Navbar with Centre Logo - End -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center">Marge Simpson | Contact Me</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAROUSEL SWIPER - Start -->
+    <div class="container pt-5">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="https://www.behance.net" target="_blank"><img class="swiper-slide-image slideswipe" data-swiper-parallax="36%" src="img/carousel1.png" alt="Marge on Behance - street art. Behance me!"></a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="https://www.instagram.com" target="_blank"><img class="swiper-slide-image slideswipe" data-swiper-parallax="36%" src="img/carousel2.png" alt="Marge on Instagram - artwork. Insta me!"></a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="https://www.linkedin.com" target="_blank"><img class="swiper-slide-image slideswipe" data-swiper-parallax="36%" src="img/carousel3.png" alt="Marge on LinkedIn - connect. Link with me now!"></a>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <!-- CAROUSEL SWIPER - End -->
+
+    <!-- SERVICES FEATURE BOX - Start: https://www.bootdey.com/snippets/view/services-section-page -->
+    <div class="container">
+
+      <div class="row">
+        <h2>Services</h2>
+        <!-- feature box -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="bi bi-display"></i>
+            </div>
+            <div class="feature-content">
+              <h5>Unique design</h5>
+              <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- feature box -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="bi bi-person-fill"></i>
+            </div>
+            <div class="feature-content">
+              <h5>Different Layout</h5>
+              <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- feature box -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="bi bi-chat-fill"></i>
+            </div>
+            <div class="feature-content">
+              <h5>Make it Simple</h5>
+              <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- feature box -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="bi bi-image"></i>
+            </div>
+            <div class="feature-content">
+              <h5>Responsiveness</h5>
+              <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- feature box -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="bi bi-grid-3x3-gap-fill"></i>
+            </div>
+            <div class="feature-content">
+              <h5>Testing for Perfection</h5>
+              <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- feature box -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="feature-box-1">
+            <div class="icon">
+              <i class="bi bi-gear-fill"></i>
+            </div>
+            <div class="feature-content">
+              <h5>Advanced Options</h5>
+              <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES FEATURE BOX - End -->
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <h2 id="contactme">Work, Collaborate, Commission</h2>
+          <p>Whether you're a fellow designer, prospective client or design house <span class="standout">Marge Simpson Designs</span> can help you. If you would like to collaborate, commission or just chat you can contact me using my social media accounts (LinkedIn, Behance, Instagram), email, telephone or complete the contact form below!</p>
+          <p><strong>I am looking forward to hearing from you!</strong></p>
+        </div>
+
+        <!-- CONTACT FORM - Start: https://bootsnipp.com/snippets/N6bPx -->
+        <div class="row">
+          <div class="col-md-6" >
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3918.5340323000037!2d151.02257226958966!3d-33.81315872954359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1697234011323!5m2!1sen!2sau" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <h2>Contact</h2>
+            <form>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mt-2" placeholder="First Name" required>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mt-2" placeholder="Last Name" required>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="email" class="form-control mt-2" placeholder="Email" required>
+                  </div>
+                </div>
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="tel" class="form-control mt-2" placeholder="Phone" required>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <textarea class="form-control mt-2" id="exampleFormControlTextarea1" placeholder="Message here" rows="3" required></textarea>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input mt-2" type="checkbox" value="" id="invalidCheck2" required>
+                      <label class="form-check-label text-white mt-2" for="invalidCheck2">Tick this box if you wish to proceed</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn btn-light mt-2" type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
+
+            <div class="text-white">
+              <h2 class="text-uppercase mt-4 fw-bold">Marge Simpson</h2>
+              <i class="bi bi-telephone-fill mt-3"></i> <a href="tel:12345678">(+39) 123456</a><br>
+              <i class="bi bi-envelope-fill mt-3"></i> <a href="mailto:margesimpson@gmail.com">margesimpson@gmail.com</a><br>
+              <i class="bi bi-globe mt-3"></i> 16 Homer Street, Springfield<br>
+
+              <div class="my-4">
+                <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook display-5 p-2"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin display-5 p-2"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM - End -->
+
+      </div>
+    </div><!-- /.container -->
+
+    <!-- FLOATING STICKY SOCIAL MEDIA - Start -->
+
+    <div class="icon-bar d-none d-md-block">
+      <a href="https://facebook.com" target="_blank" class="facebook rounded-3"><i class="bi bi-facebook fs-3"></i></a>
+      <a href="https://x.com" target="_blank" class="twitter rounded-3"><i class="bi bi-twitter-x fs-3"></i></a>
+      <a href="https://google.com" target="_blank" class="google rounded-3"><i class="bi bi-google fs-3"></i></a>
+      <a href="https://linkedin.com" target="_blank" class="linkedin rounded-3"><i class="bi bi-linkedin fs-3"></i></a>
+      <a href="https://youtube.com" target="_blank" class="youtube rounded-3"><i class="bi bi-youtube fs-3"></i></a>
+    </div>
+
+    <!-- FLOATING STICKY SOCIAL MEDIA - End -->
+
+    <!-- FOOTER - Start: https://getbootstrap.com/docs/5.3/examples/footers/ -->
+
+    <div class="container">
+
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+        <p class="col-md-4 mb-0">&copy; 2026 Marge Simpson</p>
+
+        <ul class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none list-unstyled">
+          <li class="ms-3"> <a class="footsocial" href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram fs-3"></i></a></li>
+          <li class="ms-3"><a class="footsocial" href="mailto:margesimpson@gmail.com"><i class="bi bi-envelope fs-3"></i></a></li>
+          <li class="ms-3"><a class="footsocial" href="https://www.linkedin.com" target="_blank"><i class="bi bi-linkedin fs-3"></i></a></li>
+        </ul>
+
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link px-2">About</a></li>
+          <li class="nav-item"><a href="resume.html" class="nav-link px-2">Resume</a></li>
+          <li class="nav-item"><a href="portfolio.html" class="nav-link px-2">Portfolio</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link px-2">Contact</a></li>
+        </ul>
+      </footer>
+
+    </div>
+    <!-- FOOTER - End -->
+
+    <!-- =================No Content below here========================= -->
+    <!-- Bootstrap JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- CAROUSEL SWIPER CDN for Java Script - Start -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.3.0/swiper-bundle.min.js" integrity="sha384-nimz5qRuF8SOYqiuzkhgKleYiz6jIj9pUhB/LlAAsbB6I3fI9v9s5RMwMTzEyOAY" crossorigin="anonymous"></script>
+    <!-- CAROUSEL SWIPER CDN for Java Script - End -->
+
+    <!-- CAROUSEL SWIPER Java Script Custom - Start -->
+    <script src="js/script.js"></script>
+    <!-- CAROUSEL SWIPER Java Script Custom - End -->
+
+  </body>
+</html>
+<!-- Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT-->
+<!-- Bootstrap 5.3 template designed for the Web and Time-based Design subject [DESN1021] - 2026 -->
+
+<!-- END AI / SOURCE USE DECLARATION — nothing to fill in here; the completed declaration goes in the top comment. Do not delete.
+     Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-contact-ad297f0a377ab0219a88711fb64a9da1 -->
