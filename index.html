@@ -30,6 +30,11 @@
     Extent of use:    Link snippets given by Google Fonts
     Date:             14 Oct 2026
 
+    Tool/Source:      Vimeo
+    Used for:         For video embedding
+    Extent of use:    To embed my video
+    Date:             14 Oct 2026
+
     If no AI or open-source code was used in this file, replace the above with:
     "No AI or open-source code was used in this file."
 
@@ -76,7 +81,7 @@
 
   <body>
 
-    <header class="header fixed-top">
+    <header>
 
       <!-- Nav Bar -->
 
@@ -112,12 +117,22 @@
 
 
     <div>
-      <main>
-        <div class="row">
-          <div class="col">
+      <main class="home-hero">
 
-            
+        <div class="home-video">
+          
+          <!-- Source: Vimeo (https://vimeo.com/) — Embedded portfolio video -->
+          <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe 
+              src="https://player.vimeo.com/video/1235770027?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0" 
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+              title="Portfolio Frog Stop Motion">
+            </iframe>
           </div>
+
         </div>
       </main>
     </div>
@@ -131,6 +146,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
   </body>
 </html>

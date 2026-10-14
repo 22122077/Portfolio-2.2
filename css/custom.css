@@ -11,10 +11,15 @@
   First name:       Mina
   File:             custom.css
 
-  Tool/Source:      [e.g. ChatGPT / Claude / GitHub Copilot / getbootstrap.com / none]
-  Used for:         [e.g. adapting the box hover effect]
-  Extent of use:    [e.g. small snippet suggested, then adapted by hand]
-  Date:             [DD Month 2026]
+  Tool/Source:      ChatGPT
+  Used for:         min-height attribute for hero background photo
+  Extent of use:     Assisted with min-height attribute
+  Date:             14 Oct 2026
+
+  Tool/Source:      ChatGPT
+  Used for:         width attribute for hero video
+  Extent of use:     Assisted with width attribute
+  Date:             14 Oct 2026
 
   If no AI or open-source code was used in this file, replace the above with:
   "No AI or open-source code was used in this file."
@@ -60,7 +65,29 @@ body {
 }
 
 
-/* HEADER */
+/* HEADER END*/
+
+/* HOME PAGE */
+
+/* Source: ChatGPT - Assisted with min-height attribute */
+.home-hero {
+  width: 100%;
+  min-height: calc(100svh - 4.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #faf8f7;
+  background-image: url("../img/home/orange-floral-background.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Source: ChatGPT - Assisted with width attribute */
+.home-video {
+  width: max(100%, calc((100svh - 4.25rem) * 1.77778))
+}
+
+/* HOME PAGE END*/
 
 /* MEDIA QUERIES - Start */
 /* Examples of customising Bootstrap's media queries at different 'snapping' points - for example, change the size of your browser window and watch the <p> text colour change. Don't EVER change the pixel variables or you will be creating snapping points between Bootstrap's default snapping points - just add your styles in the brackets of the @media queries */
