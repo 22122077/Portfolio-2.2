@@ -49,8 +49,13 @@ html {
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.5;
   margin: 0 auto;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Scope One", serif;
 }
 
 /* HEADER */
@@ -120,16 +125,6 @@ body {
   background-color: #faf8f7;
 }
 
-.about-page h1,
-.about-page h2 {
-  font-family: "Scope One", serif;
-}
-
-.about-page p {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  line-height: 1.5;
-}
-
 .about-portrait {
   width: 100%;
   max-width: 400px;
@@ -153,6 +148,67 @@ body {
   left: 30%;
   transform: translateX(-50%) rotate(-10deg);
   z-index: 1;
+}
+
+.about-craft-collage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.about-craft-large-wrapper,
+.about-craft-small-wrapper {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  align-self: end;
+}
+
+.about-craft-large-wrapper {
+  width: 72%;
+  justify-self: start;
+}
+
+.about-craft-small-wrapper {
+  width: 42%;
+  justify-self: end;
+  z-index: 1;
+}
+
+.about-craft-large,
+.about-craft-small {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.5rem;
+}
+
+.about-craft-large-tape,
+.about-craft-small-tape {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+.about-craft-large-tape {
+  width: 52%;
+  top: -14%;
+  left: 25%;
+  transform: rotate(7deg);
+}
+
+.about-craft-small-tape {
+  width: 55%;
+  top: -14%;
+  left: 23%;
+  transform: rotate(7deg);
+}
+
+.about-beyond-text {
+  text-align: right;
 }
 
 /* ABOUT PAGE END */
@@ -180,6 +236,25 @@ body {
 @media (min-width: 768px) and (max-width: 991.98px) {
   p {
     color: black;
+  }
+  .about-craft-collage {
+    max-width: 320px;
+  }
+
+  .about-craft-large-wrapper {
+    width: 72%;
+  }
+
+  .about-craft-small-wrapper {
+    width: 46%;
+  }
+
+  .about-beyond-text h2 {
+    margin-bottom: 1rem;
+  }
+
+  .about-beyond-text p {
+    margin-bottom: 0;
   }
 }
 
