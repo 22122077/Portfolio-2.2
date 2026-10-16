@@ -26,6 +26,11 @@
   Extent of use:     Referenced and then adapted myself
   Date:             14 Oct 2026
 
+  Tool/Source:      ChatGPT
+  Used for:         min-height attribute for web dev
+  Extent of use:     Assisted with min-height attribute
+  Date:             16 Oct 2026
+
   If no AI or open-source code was used in this file, replace the above with:
   "No AI or open-source code was used in this file."
 
@@ -213,6 +218,43 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ABOUT PAGE END */
 
+
+/* PROJECT CATEGORY */
+
+/* Source: ChatGPT - Assisted with min-height attribute */
+.project-category {
+  min-height: calc(100svh - 4.25rem);
+  background-color: #faf8f7;
+}
+
+.project-note {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+.project-note-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #d9adbd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-note-placeholder span {
+  font-family: "Scope One", serif;
+  font-size: 2rem;
+}
+
+.project-note:focus-visible {
+  outline: 3px solid #b87586;
+  outline-offset: 4px;
+}
+
+/* PROJECT CATEGORY END */
 
 /* MEDIA QUERIES - Start */
 /* Examples of customising Bootstrap's media queries at different 'snapping' points - for example, change the size of your browser window and watch the <p> text colour change. Don't EVER change the pixel variables or you will be creating snapping points between Bootstrap's default snapping points - just add your styles in the brackets of the @media queries */
