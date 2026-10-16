@@ -13,23 +13,38 @@
 
   Tool/Source:      ChatGPT
   Used for:         min-height attribute for hero background photo
-  Extent of use:     Assisted with min-height attribute
+  Extent of use:    Assisted with min-height attribute
   Date:             14 Oct 2026
 
   Tool/Source:      ChatGPT
   Used for:         width attribute for hero video
-  Extent of use:     Assisted with width attribute
+  Extent of use:    Assisted with width attribute
   Date:             14 Oct 2026
 
   Tool/Source:      W3 Schools
   Used for:         To set aspect ratio
-  Extent of use:     Referenced and then adapted myself
+  Extent of use:    Referenced and then adapted myself
   Date:             14 Oct 2026
 
   Tool/Source:      ChatGPT
   Used for:         min-height attribute for web dev
-  Extent of use:     Assisted with min-height attribute
+  Extent of use:    Assisted with min-height attribute
   Date:             16 Oct 2026
+
+  Tool/Source:      W3 Schools
+  Used for:         ::before pseudo-element
+  Extent of use:    Referenced for ::before pseudo-element
+  Date:             17 Oct 2026
+
+  Tool/Source:      W3 Schools
+  Used for:         ::before pseudo-element
+  Extent of use:    Referenced for ::before pseudo-element
+  Date:             17 Oct 2026
+
+  Tool/Source:      W3 Schools
+  Used for:         ::after pseudo-element
+  Extent of use:    Referenced for ::after pseudo-element
+  Date:             17 Oct 2026
 
   If no AI or open-source code was used in this file, replace the above with:
   "No AI or open-source code was used in this file."
@@ -61,6 +76,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Scope One", serif;
+}
+
+/* SHARED CONTENT LAYOUT */
+
+.content-width {
+  max-width: 1250px;
+  margin-inline: auto;
 }
 
 /* HEADER */
@@ -256,6 +278,107 @@ h1, h2, h3, h4, h5, h6 {
 
 /* PROJECT CATEGORY END */
 
+
+/* PROJECT DETAILS */
+
+.project-page {
+  background-color: #faf8f7;
+  min-height: calc(100svh - 4.25rem);
+}
+
+.project-description {
+  position: relative;
+  background-image: url("../img/project-details/plain-paper.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  padding: 3rem max(7%, 6rem);
+  max-width: 1250px;
+  margin-top: 2rem;
+}
+
+/* Source: W3 Schools (https://www.w3schools.com/cssref/sel_after.php) - referenced to figure out ::after pseudo-element */
+.project-description::before,
+.project-description::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 100px;
+  background-image: url("../img/about/pink-tape.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.project-description::before {
+  left: -50px;
+  transform: translateY(-50%) rotate(95deg);
+}
+
+.project-description::after {
+  right: -50px;
+  transform: translateY(-50%) rotate(95deg);
+}
+
+.tech-stack{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  max-width: 520px;
+  margin-left: auto;
+}
+
+.tech-stack li {
+  background-color: #ee99b1;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.project-title {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+
+/* Source: W3 Schools (https://www.w3schools.com/cssref/sel_before.php) - referenced to figure out ::before pseudo-element */
+.project-title::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/project-details/plain-pink-tape.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  transform: rotate(3.3deg);
+}
+
+.project-title h1 {
+  position: relative;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.project-demo {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.project-demo-placeholder {
+  background-color: #eee5e5;
+  border: 1px dashed #b87586;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* PROJECT DETAILS END */
+
 /* MEDIA QUERIES - Start */
 /* Examples of customising Bootstrap's media queries at different 'snapping' points - for example, change the size of your browser window and watch the <p> text colour change. Don't EVER change the pixel variables or you will be creating snapping points between Bootstrap's default snapping points - just add your styles in the brackets of the @media queries */
 
@@ -265,12 +388,51 @@ h1, h2, h3, h4, h5, h6 {
   p {
     color: black;
   }
+
+  .project-stack {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .project-description {
+    padding: 3.5rem 8% 3rem;
+  }
+
+  .project-description::before {
+    top: -18px;
+    left: 50%;
+    width: 240px;
+    max-width: 55%;
+    height: 100px;
+    transform: translateX(-50%) rotate(4deg);
+  }
+
+  .project-description::after {
+    display: none;
+  }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   p {
     color: black;
+  }
+
+  .project-description {
+    padding: 3.5rem 8% 3rem;
+  }
+
+  .project-description::before {
+    top: -18px;
+    left: 50%;
+    width: 240px;
+    max-width: 55%;
+    height: 100px;
+    transform: translateX(-50%) rotate(4deg);
+  }
+
+  .project-description::after {
+    display: none;
   }
 }
 
