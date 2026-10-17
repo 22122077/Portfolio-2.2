@@ -46,6 +46,11 @@
   Extent of use:    Referenced for ::after pseudo-element
   Date:             17 Oct 2026
 
+  Tool/Source:      W3 Schools
+  Used for:         grid template areas property
+  Extent of use:    Referenced for grid template areas property
+  Date:             17 Oct 2026
+
   If no AI or open-source code was used in this file, replace the above with:
   "No AI or open-source code was used in this file."
 
@@ -428,6 +433,82 @@ h1, h2, h3, h4, h5, h6 {
 
 /* PORTFOLIO PAGE END */
 
+
+/* CONTACT PAGE */
+
+.contact-page {
+  background-color: #faf8f7;
+  min-height: calc(100svh - 4.25rem);
+  display: flex;
+  align-items: center;
+}
+
+.contact-page .content-width {
+  width: 100%;
+}
+
+.contact-methods {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  grid-area: methods;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-methods a {
+  width: 5rem;
+  aspect-ratio: 1 / 1;
+  background-color: #d9adbd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2b2528;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.contact-methods a:hover,
+.contact-methods a:focus-visible {
+  background-color: #b87586;
+  color: white;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 5rem;
+  grid-template-areas:
+    "heading heading"
+    "photo methods";
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 550px;
+  margin-inline: auto;
+}
+
+.contact-heading {
+  grid-area: heading;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.contact-photo-placeholder {
+  grid-area: photo;
+  background-color: #d9adbd;
+  width: 100%;
+  max-width: 400px;
+  min-height: 20rem;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+/* CONTACT PAGE END */
+
+
 /* MEDIA QUERIES - Start */
 /* Examples of customising Bootstrap's media queries at different 'snapping' points - for example, change the size of your browser window and watch the <p> text colour change. Don't EVER change the pixel variables or you will be creating snapping points between Bootstrap's default snapping points - just add your styles in the brackets of the @media queries */
 
@@ -607,6 +688,28 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Source: W3 Schools (https://www.w3schools.com/cssref/pr_grid-template-areas.php) - used for grid template areas */
+@media (min-width: 992px) {
+  .contact-layout {
+    max-width: 900px;
+    grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+    grid-template-areas:
+      "photo heading"
+      "photo methods";
+    gap: 2rem 2rem;
+  }
+
+  .contact-heading {
+    text-align: center;
+    align-self: end;
+  }
+
+  .contact-methods {
+    flex-direction: row;
+    justify-content: center;
+    align-self: start;
+  }
+}
 /* MEDIA QUERIES - End */
 
 /* Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT */
