@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT-->
+
+<!-- Date: 12 October 2026 -->
+<!-- Author: Web and Time-based Design subject -->
+
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required Bootstrap meta tags -->
+    <meta charset="utf-8">
+
+    <!--
+    ================= AI / SOURCE USE DECLARATION (DRAFT — COMPLETE THIS) =================
+    Per DESN1021 Project 2.2 Assessment Specifications, a summary declaration is
+    required at the top of EVERY file. Replace the bracketed placeholders below,
+    and add inline acknowledgements next to any AI/open-source snippet you use.
+    If you take the AI-assisted code animation option, that code must ALSO be
+    wrapped in inline start/end comments, and you must be able to explain it.
+
+    First name:       Mina
+    File:             mobile-dev.html
+
+    Tool/Source:       Bootstrap
+    Used for:         Nav Bar
+    Extent of use:    used starter for base of nav bar
+    Date:             14 Oct 2026
+
+    Tool/Source:      Google Fonts
+    Used for:         For Scope One and Plus Jakarta Sans fonts used in website
+    Extent of use:    Link snippets given by Google Fonts
+    Date:             14 Oct 2026
+
+
+    If no AI or open-source code was used in this file, replace the above with:
+    "No AI or open-source code was used in this file."
+
+    Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-portfolio-d39cd4e8c7a608a62ed10942fc93cbc5
+    =====================================================================================
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Other meta tags -->
+    <meta name="description" content="Portfolio Website">
+    <meta name="author" content="Mina Armijo">
+
+    <!-- Title  -->
+    <title>Mobile Development | Mina Armijo</title>
+
+    <!-- ***** Link tags ***** -->
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" integrity="sha384-CK2SzKma4jA5H/MXDUU7i1TqZlCFaD4T01vtyDFvPlD97JQyS+IsSh1nI2EFbpyk" crossorigin="anonymous">
+
+    <!-- Web fonts -->
+    <!-- Source: Google Fonts (https://fonts.google.com/selection/embed) — Scope One and Plus Jakarta Sans Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Prata&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/custom.css" type="text/css" rel="stylesheet" media="screen">
+
+  </head>
+
+
+  <body>
+
+    <header>
+
+      <!-- Nav Bar -->
+
+      <!-- Source: Bootstrap (https://getbootstrap.com/docs/5.3/components/navbar/) — Base of Nav Bar -->
+      <nav class="navbar navbar-expand-md site-nav">
+        <div class="container-fluid px-3 px-lg-5">
+
+          <a class="navbar-brand" href="index.html" aria-label="Home">
+            <span class="d-none d-lg-inline">Home</span>
+            <i class="bi bi-house-door d-lg-none" aria-hidden="true"></i>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-md-3">
+              <li class="nav-item">
+                <a class="nav-link active" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+    <main class="project-category container-fluid px-3 px-lg-5 py-5">
+      <div class="content-width">
+        <h1 class="visually-hidden">Mobile Development Projects</h1>
+        <div class="row g-4 justify-content-center">
+
+            <!-- Ponyo's Ocean Kitchen Android -->
+          <div class="col-12 col-md-6">
+            <a 
+              href="ponyo-android.html"
+              class="project-note"
+              aria-label="View Ponyo's Ocean Kitchen Android Project Details">
+              
+              <div class="project-note-placeholder">
+                <span>Ponyo's Ocean Kitchen Android</span>
+              </div>
+            </a>
+          </div>
+
+            <!-- Ponyo's Ocean Kitchen iOS -->
+          <div class="col-12 col-md-6">
+            <a 
+              href="ponyo-ios.html"
+              class="project-note"
+              aria-label="View Ponyo's Ocean Kitchen iOS Project Details">
+              
+              <div class="project-note-placeholder">
+                <span>Ponyo's Ocean Kitchen iOS</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+
+    <!-- PORTFOLIO PAGE - End -->
+
+    <!-- =================No Content below here========================= -->
+    <!-- Bootstrap JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- FULL FEATURED IMAGE VIEWER JS - Start -->
+    <script src="js/spotlight.js"></script>
+    <!-- FULL FEATURED IMAGE VIEWER JS - End -->
+
+  </body>
+</html>
+<!-- Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT-->
+<!-- Bootstrap 5.3 template designed for the Web and Time-based Design subject [DESN1021] - 2026 -->
+
+<!-- END AI / SOURCE USE DECLARATION — nothing to fill in here; the completed declaration goes in the top comment. Do not delete.
+     Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-portfolio-d39cd4e8c7a608a62ed10942fc93cbc5 -->
