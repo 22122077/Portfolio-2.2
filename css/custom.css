@@ -379,6 +379,55 @@ h1, h2, h3, h4, h5, h6 {
 
 /* PROJECT DETAILS END */
 
+/* PORTFOLIO PAGE */
+
+.portfolio-page {
+  background-color: #faf8f7;
+  min-height: calc(100svh - 4.25rem);
+}
+
+.portfolio-desk {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  background-color: #d9b7a5;
+  border-radius: 1rem;
+}
+
+.portfolio-link {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 3px black;
+  padding: 0.5rem;
+}
+
+.portfolio-web {
+  left: 25%;
+  top: 42%;
+}
+
+.portfolio-mobile {
+  left: 55%;
+  top: 78%;
+}
+
+.portfolio-ui {
+  left: 82%;
+  top: 42%;
+}
+
+.portfolio-link:focus-visible {
+  outline: 3px solid #b87586;
+  outline-offset: 4px;
+}
+
+/* PORTFOLIO PAGE END */
+
 /* MEDIA QUERIES - Start */
 /* Examples of customising Bootstrap's media queries at different 'snapping' points - for example, change the size of your browser window and watch the <p> text colour change. Don't EVER change the pixel variables or you will be creating snapping points between Bootstrap's default snapping points - just add your styles in the brackets of the @media queries */
 
@@ -410,6 +459,31 @@ h1, h2, h3, h4, h5, h6 {
   .project-description::after {
     display: none;
   }
+
+  .portfolio-desk {
+    aspect-ratio: 2 / 3;
+    max-width: 450px;
+    margin-inline: auto;
+  }
+
+  .portfolio-link {
+    font-size: 2rem;
+  }
+
+  .portfolio-web {
+    left: 50%;
+    top: 25%;
+  }
+
+  .portfolio-mobile {
+    left: 50%;
+    top: 52%;
+  }
+
+  .portfolio-ui {
+    left: 50%;
+    top: 80%;
+  }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -433,6 +507,31 @@ h1, h2, h3, h4, h5, h6 {
 
   .project-description::after {
     display: none;
+  }
+
+  .portfolio-desk {
+    aspect-ratio: 2 / 3;
+    max-width: 450px;
+    margin-inline: auto;
+  }
+
+  .portfolio-link {
+    font-size: 2rem;
+  }
+
+  .portfolio-web {
+    left: 50%;
+    top: 25%;
+  }
+
+  .portfolio-mobile {
+    left: 50%;
+    top: 52%;
+  }
+
+  .portfolio-ui {
+    left: 50%;
+    top: 80%;
   }
 }
 
@@ -459,6 +558,31 @@ h1, h2, h3, h4, h5, h6 {
 
   .about-beyond-text p {
     margin-bottom: 0;
+  }
+
+  .portfolio-desk {
+  max-width: 600px;
+  margin-inline: auto;
+  aspect-ratio: 2 / 3;
+}
+
+  .portfolio-link {
+    font-size: 2.5rem;
+  }
+
+  .portfolio-web {
+    left: 50%;
+    top: 25%;
+  }
+
+  .portfolio-mobile {
+    left: 50%;
+    top: 52%;
+  }
+
+  .portfolio-ui {
+    left: 50%;
+    top: 80%;
   }
 }
 
