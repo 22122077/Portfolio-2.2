@@ -255,6 +255,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-note {
+  position: relative;
   display: block;
   text-decoration: none;
   color: inherit;
@@ -262,18 +263,24 @@ h1, h2, h3, h4, h5, h6 {
   margin-inline: auto;
 }
 
-.project-note-placeholder {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  background-color: #d9adbd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.project-note::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 30%;
+  top: -13%;
+  left: 50%;
+  transform: translateX(-50%) rotate(5.5deg);
+  background-image: url("../img/project-category/green-tape.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
-.project-note-placeholder span {
-  font-family: "Scope One", serif;
-  font-size: 2rem;
+.project-note-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .project-note:focus-visible {
