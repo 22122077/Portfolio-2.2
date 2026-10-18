@@ -479,11 +479,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 5rem;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   grid-template-areas:
     "heading heading"
     "photo methods";
   align-items: center;
+  justify-items: center;
   gap: 1.5rem;
   max-width: 550px;
   margin-inline: auto;
@@ -495,16 +496,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-.contact-photo-placeholder {
+.contact-photo {
   grid-area: photo;
-  background-color: #d9adbd;
+  display: block;
   width: 100%;
   max-width: 400px;
-  min-height: 20rem;
-  aspect-ratio: 3 / 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: auto;
   margin-inline: auto;
 }
 
@@ -629,12 +626,19 @@ h1, h2, h3, h4, h5, h6 {
   .contact-heading {
     text-align: center;
     align-self: end;
+    font-size: 3.5rem;
   }
 
   .contact-methods {
     flex-direction: row;
     justify-content: center;
     align-self: start;
+  }
+
+  .contact-methods a {
+    width: 6.5rem;
+    font-size: 2.5rem;
+    flex-shrink: 0;
   }
 }
 
