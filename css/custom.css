@@ -347,6 +347,18 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.project-page-prototype .tech-stack {
+  display: flex;
+  justify-content: flex-start;
+  max-width: none;
+  margin: 0;
+}
+
+.project-page-prototype .tech-stack li {
+  width: 12rem;
+}
+
+
 .project-title {
   position: relative;
   width: 100%;
@@ -375,6 +387,12 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   font-size: 3rem;
   margin-bottom: 0;
+}
+
+.project-title h1.project-title-long {
+  font-size: 2rem;
+  line-height: 1.15;
+  text-align: center;
 }
 
 .project-demo {
@@ -535,16 +553,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .project-description::before {
-    top: -18px;
+    top: -35px;
     left: 50%;
     width: 240px;
     max-width: 55%;
-    height: 100px;
-    transform: translateX(-50%) rotate(4deg);
+    height: 130px;
+    transform: translateX(-50%) rotate(5deg);
   }
 
   .project-description::after {
     display: none;
+  }
+
+  .project-page-prototype .project-description {
+    padding-top: 5.5rem;
+  }
+
+  .project-page-prototype .project-description::before {
+    top: -20px;
   }
 }
 
@@ -559,16 +585,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .project-description::before {
-    top: -18px;
+    top: -40px;
     left: 50%;
     width: 240px;
     max-width: 55%;
-    height: 100px;
-    transform: translateX(-50%) rotate(4deg);
+    height: 130px;
+    transform: translateX(-50%) rotate(5deg);
   }
 
   .project-description::after {
     display: none;
+  }
+
+  .project-page-prototype .project-description {
+    padding-top: 5.5rem;
+  }
+
+  .project-page-prototype .project-description::before {
+    top: -20px;
   }
 }
 
@@ -596,6 +630,19 @@ h1, h2, h3, h4, h5, h6 {
   .about-beyond-text p {
     margin-bottom: 0;
   }
+
+  .project-page-prototype .project-title {
+    width: 50%;
+  }
+
+  .project-page-prototype .tech-stack {
+    justify-content: flex-end;
+  }
+
+  .project-page-prototype .project-title h1 {
+    font-size: 1.5rem;
+  }
+
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -646,6 +693,14 @@ h1, h2, h3, h4, h5, h6 {
     width: 6.5rem;
     font-size: 2.5rem;
     flex-shrink: 0;
+  }
+
+  .project-page-prototype .project-title {
+    width: 50%;
+  }
+
+  .project-page-prototype .tech-stack {
+    justify-content: flex-end;
   }
 }
 
