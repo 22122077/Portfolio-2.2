@@ -51,6 +51,11 @@
   Extent of use:    Referenced and then adapted myself
   Date:             20 Oct 2026
 
+  Tool/Source:      W3 Schools
+  Used for:         responsive title size
+  Extent of use:    Referenced for clamp function parameters
+  Date:             22 Oct 2026
+
   If no AI or open-source code was used in this file, replace the above with:
   "No AI or open-source code was used in this file."
 
@@ -144,6 +149,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
 }
 
+/* Source: (https://www.w3schools.com/cssref/func_clamp.php)- referenced for utilizing clamp function */
 .home-title {
   font-size: clamp(2rem, 4vw, 3.5rem);
   text-align: center;
@@ -282,6 +288,13 @@ h1, h2, h3, h4, h5, h6 {
 .project-category {
   min-height: calc(100svh - 4.25rem);
   background-color: #faf8f7;
+}
+
+/* Source: (https://www.w3schools.com/cssref/func_clamp.php)- referenced for utilizing clamp function */
+.project-category-title {
+  text-align: center;
+  font-size: clamp(3.25rem, 6vw, 5.25rem);
+  margin-bottom: 4rem;
 }
 
 .project-note {
