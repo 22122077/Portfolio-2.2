@@ -16,11 +16,6 @@
   Extent of use:    Assisted with min-height attribute
   Date:             14 Oct 2026
 
-  Tool/Source:      ChatGPT
-  Used for:         width attribute for hero video
-  Extent of use:    Assisted with width attribute
-  Date:             14 Oct 2026
-
   Tool/Source:      W3 Schools
   Used for:         To set aspect ratio
   Extent of use:    Referenced and then adapted myself
@@ -138,17 +133,47 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   min-height: calc(100svh - 4.25rem);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 2rem 1rem;
   background-color: #faf8f7;
   background-image: url("../img/home/orange-floral-background.webp");
   background-position: center;
   background-size: cover;
 }
 
-/* Source: ChatGPT - Assisted with width attribute */
+.home-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  text-align: center;
+  color: #2b2528;
+  margin: 0;
+}
+
+.home-intro {
+  text-align: center;
+}
+
+.home-subheading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.25rem 0 0;
+}
+
+.home-role {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
 .home-video {
-  width: max(100%, calc((100svh - 4.25rem) * 1.77778))
+  width: 100%;
+  max-width: 1200px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* HOME PAGE END*/
@@ -792,6 +817,15 @@ h1, h2, h3, h4, h5, h6 {
 
   .project-demo-portrait::after {
     display: none;
+  }
+
+  .home-subheading {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .home-role {
+    font-size: 0.8rem;
   }
 }
 /* MEDIA QUERIES - End */
