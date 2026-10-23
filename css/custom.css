@@ -56,8 +56,10 @@
   Extent of use:    Referenced for clamp function parameters
   Date:             22 Oct 2026
 
-  If no AI or open-source code was used in this file, replace the above with:
-  "No AI or open-source code was used in this file."
+  Tool/Source:      ChatGPT
+  Used for:         portfolio hover effects, cutout styling and reduced-motion accessibility
+  Extent of use:    Assisted with CSS implementation; styling adjusted to suit my portfolio
+  Date:             23 Oct 2026
 
   Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-custom-4b34689595b6f67885b4d4695e562386
   =====================================================================================
@@ -66,10 +68,6 @@
 
 /* Author: Web and Time-based Design subject */
 /* Date: 12 October 2026 */
-
-/* Custom styles to override and/or add to Bootstrap css */
-
-/* sets the default rem size for an entire page (for all sizing to be relative to) */
 
 html {
   font-size: 1rem;
@@ -325,6 +323,13 @@ h1, h2, h3, h4, h5, h6 {
   color: inherit;
   max-width: 520px;
   margin-inline: auto;
+  transition: transform 0.25s ease;
+}
+
+/* Source: ChatGPT - Assisted with hover transition and transform effects for project notes */
+.project-note:hover,
+.project-note:focus-visible {
+  transform: translateY(-6px) scale(1.03);
 }
 
 .project-note::after {
@@ -509,50 +514,72 @@ h1, h2, h3, h4, h5, h6 {
 /* PORTFOLIO PAGE */
 
 .portfolio-page {
-  background-color: #faf8f7;
   min-height: calc(100svh - 4.25rem);
-}
-
-.portfolio-desk {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 2387 / 1050;
-  background-image: url("../img/portfolio/desk.webp");
-  background-repeat: no-repeat;
+  background-color: #faf8f7;
+  background-image: url("../img/home/orange-floral-background.webp");
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
-.portfolio-link {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 3rem;
-  font-weight: 600;
-  color: white;
+.portfolio-heading {
+  text-align: center;
+  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  margin-bottom: 2.5rem;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-decoration: none;
-  text-shadow: 2px 2px 3px black;
-  padding: 0.5rem;
+  color: #2b2528;
 }
 
-.portfolio-web {
-  left: 25%;
-  top: 42%;
+.portfolio-art {
+  width: 100%;
+  height: clamp(300px, 28vw, 360px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
 }
 
-.portfolio-mobile {
-  left: 55%;
-  top: 78%;
+/* Source: ChatGPT - Assisted with drop-shadow */
+.portfolio-object-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15));
 }
 
-.portfolio-ui {
-  left: 82%;
-  top: 42%;
+/* Source: ChatGPT - Assisted with paper-label hover transitions */
+.portfolio-item-label {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.9rem;
+  font-family: "Scope One", serif;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #2b2528;
+  background-color: rgba(250, 248, 247, 0.85);
+  box-shadow: 2px 3px 6px rgba(74, 43, 54, 0.12);
+  transform: rotate(-1.5deg);
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.portfolio-link:focus-visible {
+.portfolio-item:hover .portfolio-art {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.portfolio-item:hover .portfolio-item-label {
+  color: #b87586;
+  transform: rotate(0deg);
+}
+
+.portfolio-item:focus-visible {
   outline: 3px solid #b87586;
-  outline-offset: 4px;
+  outline-offset: 5px;
 }
 
 /* PORTFOLIO PAGE END */
@@ -668,14 +695,9 @@ h1, h2, h3, h4, h5, h6 {
 /* FOOTER END */
 
 /* MEDIA QUERIES - Start */
-/* Examples of customising Bootstrap's media queries at different 'snapping' points - for example, change the size of your browser window and watch the <p> text colour change. Don't EVER change the pixel variables or you will be creating snapping points between Bootstrap's default snapping points - just add your styles in the brackets of the @media queries */
 
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-
-  p {
-    color: black;
-  }
 
   .tech-stack {
     grid-template-columns: repeat(2, 1fr);
@@ -710,9 +732,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  p {
-    color: black;
-  }
 
   .project-description {
     padding: 3.5rem 8% 3rem;
@@ -742,9 +761,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  p {
-    color: black;
-  }
+  
   .about-craft-collage {
     max-width: 320px;
   }
@@ -781,23 +798,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  p {
-    color: black;
-  }
+  
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-  p {
-    color: black;
-  }
+  
 }
 
 /* // Extra extra large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  p {
-    color: black;
-  }
+  
 }
 
 /* Source: W3 Schools (https://www.w3schools.com/cssref/pr_grid-template-areas.php) - used for grid template areas */
@@ -839,32 +850,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 991.98px) {
-  .portfolio-desk {
-    max-width: 350px;
-    margin-inline: auto;
-    aspect-ratio: 1050 / 2387;
-    background-image: url("../img/portfolio/desk-vertical.webp");
-  }
-
-  .portfolio-link {
-    font-size: 2rem;
-  }
-
-  .portfolio-web {
-    left: 50%;
-    top: 25%;
-  }
-
-  .portfolio-mobile {
-    left: 50%;
-    top: 52%;
-  }
-
-  .portfolio-ui {
-    left: 50%;
-    top: 80%;
-  }
-
   /* Source: Bootstrap (https://getbootstrap.com/docs/5.0/helpers/ratio/) - referenced for aspect ratios */
   .project-demo-portrait {
     --bs-aspect-ratio: 105%;
@@ -872,9 +857,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 575.98px) {
-  .portfolio-desk {
-    max-width: 300px;
-  }
 
   /* Source: Bootstrap (https://getbootstrap.com/docs/5.0/helpers/ratio/) - referenced for aspect ratios */
   .project-demo-portrait {
@@ -898,6 +880,10 @@ h1, h2, h3, h4, h5, h6 {
   .home-role {
     font-size: 0.8rem;
   }
+
+  .portfolio-art {
+    height: 300px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -912,7 +898,35 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem;
     line-height: 1;
   }
+
+  .portfolio-page .row {
+    row-gap: 2.5rem;
+  }
+
+  .portfolio-item-label {
+    margin-bottom: 1rem;
+  }
 }
+
+/* Source: ChatGPT - Assisted with prefers-reduced-motion media query to reduce animations for users who request reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .project-note,
+  .portfolio-art,
+  .portfolio-item-label {
+    transition: none;
+  }
+
+  .project-note:hover,
+  .project-note:focus-visible,
+  .portfolio-item:hover .portfolio-art {
+    transform: none;
+  }
+
+  .portfolio-item:hover .portfolio-item-label {
+    transform: rotate(-1.5deg);
+  }
+}
+
 /* MEDIA QUERIES - End */
 
 /* Project 2 Blank Bootstrap 5.3 starter template for DESN1021, Web & Time Based Design. <div> tags should be replaced with semantic HTML tags where appropriate  [DESN1021-Pro2#2-7bddd3e699aksjdhag888adfgkjahdfg8] DO NOT DELETE THIS COMMENT */
