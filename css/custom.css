@@ -290,10 +290,31 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #faf8f7;
 }
 
+.project-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  margin-bottom: 1.5rem;
+  color: #6f3f50;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-back-link:hover {
+  color: #b87586;
+}
+
+.project-back-link:focus-visible {
+  outline: 2px solid #b87586;
+  outline-offset: 4px;
+}
+
 /* Source: (https://www.w3schools.com/cssref/func_clamp.php)- referenced for utilizing clamp function */
 .project-category-title {
   text-align: center;
-  font-size: clamp(3.25rem, 6vw, 5.25rem);
+  font-size: clamp(2.75rem, 6vw, 5.25rem);
   margin-bottom: 4rem;
 }
 
@@ -839,6 +860,20 @@ h1, h2, h3, h4, h5, h6 {
 
   .home-role {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .project-back-link {
+    min-width: 44px;
+    min-height: 44px;
+    margin-bottom: 0;
+    justify-content: flex-start;
+  }
+
+  .project-back-link > span[aria-hidden="true"] {
+    font-size: 2rem;
+    line-height: 1;
   }
 }
 /* MEDIA QUERIES - End */
