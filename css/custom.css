@@ -314,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Source: (https://www.w3schools.com/cssref/func_clamp.php)- referenced for utilizing clamp function */
 .project-category-title {
   text-align: center;
-  font-size: clamp(2.75rem, 6vw, 5.25rem);
+  font-size: clamp(2.5rem, 6vw, 5.25rem);
   margin-bottom: 4rem;
 }
 
@@ -867,7 +867,7 @@ h1, h2, h3, h4, h5, h6 {
   .project-back-link {
     min-width: 44px;
     min-height: 44px;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
     justify-content: flex-start;
   }
 
