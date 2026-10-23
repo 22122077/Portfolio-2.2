@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*
-  ================= AI / SOURCE USE DECLARATION (DRAFT — COMPLETE THIS) =================
+  ================= AI / SOURCE USE DECLARATION  =================
   Per DESN1021 Project 2.2 Assessment Specifications, a summary declaration is
   required at the top of EVERY file. Replace the bracketed placeholders below,
   and add inline acknowledgements next to any AI/open-source snippet you use.
@@ -431,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .tech-stack li {
   background-color: rgba(238, 153, 177, 0.3);
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 2rem;
   text-align: center;
 }
@@ -903,6 +903,16 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-art {
     height: 300px;
+  }
+
+  .project-title-android {
+    min-height: 150px;
+    padding: 2rem 1.5rem;
+  }
+
+  .project-title-android h1.project-title-long {
+    font-size: 2rem;
+    line-height: 1.2;
   }
 }
 
