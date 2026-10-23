@@ -629,6 +629,43 @@ h1, h2, h3, h4, h5, h6 {
 
 /* CONTACT PAGE END */
 
+/* FOOTER */
+
+.site-footer {
+  background-color: #f9eff0;
+  border-top: 1px solid #d9adbd;
+}
+
+.site-footer-inner {
+  padding: 0.5rem 0;
+}
+
+.site-footer-copy {
+  font-size: 0.85rem;
+  color: #6f3f50;
+}
+
+.site-footer-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 36px;
+  color: #6f3f50;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+
+.site-footer-links a:hover {
+  color: #b87586;
+}
+
+.site-footer-links a:focus-visible {
+  outline: 2px solid #b87586;
+  outline-offset: 3px;
+}
+
+/* FOOTER END */
 
 /* MEDIA QUERIES - Start */
 /* Examples of customising Bootstrap's media queries at different 'snapping' points - for example, change the size of your browser window and watch the <p> text colour change. Don't EVER change the pixel variables or you will be creating snapping points between Bootstrap's default snapping points - just add your styles in the brackets of the @media queries */
