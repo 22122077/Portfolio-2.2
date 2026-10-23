@@ -61,6 +61,11 @@
   Extent of use:    Assisted with CSS implementation; styling adjusted to suit my portfolio
   Date:             23 Oct 2026
 
+  Tool/Source:      ChatGPT
+  Used for:         home page title and subtitle entrance animation
+  Extent of use:    Assisted with CSS keyframes and reduced-motion support
+  Date:             23 Oct 2026
+
   Declaration ref: DESN1021-Pro2.2-AIDECL#MARGE-custom-4b34689595b6f67885b4d4695e562386
   =====================================================================================
 */
@@ -153,6 +158,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   color: #2b2528;
   margin: 0;
+  animation: home-intro-fade 0.8s ease-out both;
 }
 
 .home-intro {
@@ -166,6 +172,20 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   gap: 0.6rem;
   margin: 0.25rem 0 0;
+  animation: home-intro-fade 0.8s ease-out 0.2s both;
+}
+
+/* Source: ChatGPT - Assisted with subtle fade-in animation for home introduction */
+@keyframes home-intro-fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .home-role {
@@ -373,7 +393,7 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  padding: 3rem max(7%, 6rem);
+  padding: 4.5rem max(7%, 6rem);
   max-width: 1250px;
   margin-top: 2rem;
 }
@@ -924,6 +944,11 @@ h1, h2, h3, h4, h5, h6 {
 
   .portfolio-item:hover .portfolio-item-label {
     transform: rotate(-1.5deg);
+  }
+
+  .home-title,
+  .home-subheading {
+    animation: none;
   }
 }
 
